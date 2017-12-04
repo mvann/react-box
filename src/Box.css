@@ -1,0 +1,23 @@
+.Box {
+	/*height: 100%;
+	width: 100%;*/
+	color: pink;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.Column {
+	color: tan;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+
+
+}
+
+.Cell {
+	color: lightgreen;
+}
