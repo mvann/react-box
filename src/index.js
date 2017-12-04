@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Box from './Box';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+	let boxes = [['a'],['b'],['c']];
+	<Box content={boxes} />,
+	document.getElementById('root')
 );
