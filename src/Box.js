@@ -25,7 +25,7 @@ class Box extends Component {
 	render() {
 		return (
 			<div className="Box">
-				{getColumns()}
+				{this.getColumns()}
 			</div>
 		);
 	}
@@ -47,7 +47,7 @@ class Column extends Component {
 	render() {
 		return (
 			<div className="Column">
-				{getCells()}
+				{this.getCells()}
 			</div>
 		);
 	}
@@ -62,7 +62,7 @@ class Cell extends Component {
 	render() {
 		return (
 			<div className="Cell">
-				{getLis()}
+				{this.getLis()}
 			</div>
 		);
 	}
