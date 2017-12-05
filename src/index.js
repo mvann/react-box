@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import Box from './Box';
 import './index.css';
 
-a = {nameFirst: "Doug", nameLast: "Frie"};
-
 ReactDOM.render(
-	<Box content={[[a,a,a],[a],[a,a]]} />,
+	<Box content={[[{nameFirst: "Doug", nameLast: "Frie"},{nameFirst: "Doug", nameLast: "Frie"},{nameFirst: "Doug", nameLast: "Frie"}],[{nameFirst: "Doug", nameLast: "Frie"}],[{nameFirst: "Doug", nameLast: "Frie"},{nameFirst: "Doug", nameLast: "Frie"}]]} />,
 	document.getElementById('root')
 );
