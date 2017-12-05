@@ -57,8 +57,10 @@ class Cell extends Component {
 	getLis()
 	{
 		return (
-			<li>this.props.content.firstName</li>
-			<li>this.props.content.lastName</li>
+			<ul>
+				<li>this.props.content.firstName</li>
+				<li>this.props.content.lastName</li>
+			</ul>
 		);
 	}
 
