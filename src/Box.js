@@ -56,7 +56,10 @@ class Column extends Component {
 class Cell extends Component {
 	getLis()
 	{
-		return (<li>sjdklfjdsklfjsklfjdsklf</li>);
+		return (
+			<li>this.props.content.firstName</li>
+			<li>this.props.content.lastName</li>
+		);
 	}
 
 	render() {
