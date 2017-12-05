@@ -58,8 +58,8 @@ class Cell extends Component {
 	{
 		return (
 			<ul>
-				<li>{this.props.content.firstName}</li>
-				<li>{this.props.content.lastName}</li>
+				<li>First Name:{this.props.content.nameFirst}</li>
+				<li>Last Name:{this.props.content.nameLast}</li>
 			</ul>
 		);
 	}

@@ -1,5 +1,5 @@
 .Box {
-	background-color: pink;
+	outline: 1px solid black;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -9,7 +9,7 @@
 
 .Column {
 /*	flex-grow: 1; */
-	background-color: tan;
+	outline: 1px solid black;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -20,5 +20,15 @@
 }
 
 .Cell {
-	background-color: lightgreen;
+	outline: 1px solid black;
+	width: 300px;
+	box-shadow: 2px 2px 2px grey;
+	background-color: #eee;
+	margin: 3px 0;
+}
+
+.Cell > ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
