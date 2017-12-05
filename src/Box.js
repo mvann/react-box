@@ -56,7 +56,7 @@ class Column extends Component {
 class Cell extends Component {
 	getLis()
 	{
-		return (<li>Sup</li>);
+		return (<li>sjdklfjdsklfjsklfjdsklf</li>);
 	}
 
 	render() {

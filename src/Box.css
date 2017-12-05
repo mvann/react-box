@@ -1,23 +1,24 @@
 .Box {
-	/*height: 100%;
-	width: 100%;*/
-	color: pink;
+	background-color: pink;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 .Column {
-	color: tan;
+/*	flex-grow: 1; */
+	background-color: tan;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 
-
+	padding: 5px 5px;
+	margin: 5px;
 }
 
 .Cell {
-	color: lightgreen;
+	background-color: lightgreen;
 }
