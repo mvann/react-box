@@ -1,0 +1,152 @@
+David Segleau
+Director of Technical Product Marketing, Couchbase
+Slides: NoSQL Data Modeling Using JSON Documents – A Practical Approach
+url: http://www.dataversity.net/slides-nosql-data-modeling-using-json-documents-practical-approach/
+Notes:
+if -> then
+Relationship is one-to-one or one-to-many -> Store related data as nested objects
+Relationship is many-to-one or many-to-many -> Store related data as separate documents
+Data reads are mostly parent fields -> Store children as separate documents
+Data reads are mostly parent + child fields -> Store children as nested objects
+Data writes are mostly parent or child (not both) -> Store children as separate objects
+Data writes are mostly parent and child (both) -> Store children as nested objects
+
+Are there a lot of concurrent writes, continuous updates?
+-Store children as separate documents
+
+
+url: https://dzone.com/articles/data-modeling-guidelines-for-nosql-json-document-d
+Entities: Main objects in your application
+Attributes: Properties of the objects in your application
+Relationships: Connections between entities, i.e. 1-1, 1-many, many-many
+
+Entity-Relationship Diagram
+url: https://www.smartdraw.com/entity-relationship-diagram/
+
+
+--------------------------------------------------------------------------------
+
+Entities:
+- Boxes
+- Device
+- Schedules
+
+boxes: {
+	key: {
+		devices: {
+			key: {
+				DEVICES
+			}
+		}
+	},
+	...
+}
+
+devices: {
+	key: {
+		READINGS
+	},
+	...
+}
+
+readings: {
+	key: {
+		timestamp: '',
+		readings: {}
+	}
+}
+
+??????
+rasppi: {
+	?: ?
+}
+
+
+boxes: [
+	{
+		id: '',
+		devices: [
+			id: 'temp',
+			id: 'co2'
+		],
+		name: 'stanford box 1'
+	},
+	{
+		id: '',
+		devices: [],
+		name: 'boxy'
+	}
+]
+devices: [
+	{
+		id: '',
+		box_id: '',
+		readings: [
+			{
+				id: '',
+				timestamp: '',
+				values: [
+					500,
+					99
+				]
+			},
+			{
+				id: '',
+				timestamp: '',
+				temperature: '',
+				humidity: '',
+			}
+		]
+	},
+	{
+		id: '',
+		readings: [
+			{
+				id: '',
+				timestamp: '',
+				temperature: '',
+				humidity: '',
+			},
+			{
+				id: '',
+				timestamp: '',
+				temperature: '',
+				humidity: '',
+			}
+		]
+	}
+]
+
+
+
+
+
+boxes: {
+	id0: {},
+	id1: {},
+	id2: {},
+	id3: {},
+	id4: {},
+	id5: {},
+	id6: {},
+	id7: {},
+	id8: {},
+	id9: {},
+	id10: {}
+}
+
+[
+	"hello",
+	"there"
+]
+
+{
+	0: "hello",
+	1: "hello"
+}
+
+animal = {
+	type: 'dog',
+	name: 'archie',
+	greeting: bark
+}
