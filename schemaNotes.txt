@@ -29,32 +29,74 @@ url: https://www.smartdraw.com/entity-relationship-diagram/
 Entities:
 - Boxes
 - Device
+- Users
 - Schedules
 
 boxes: {
 	key: {
 		devices: {
 			key: {
-				DEVICES
-			}
+				devices: {
+					key: {
+						readings: {
+							key: {
+								timestamp: '',
+								readings: {}
+							},
+							key2: ...
+						}
+					},
+					key2: ...
+				}
+			},
+			key2: ...
 		}
 	},
-	...
-}
-
-devices: {
+	key2: ...
+},
+users: {
 	key: {
-		READINGS
+		boxes: [ //We might not want this to be an array.
+			key1,
+			key2,
+			...
+		],
+		layouts: {
+			key: {
+				columns: [
+					{
+						order: 0,
+						boxes: [
+							{
+								order: 0,
+								key: ''
+							},
+							...
+						]
+					},
+					...
+				]
+			},
+			key2: ...
+		}
 	},
-	...
+	key2: ...
+},
+schedules: { //This might get nested in user object instead or box actually
+							//probably neither because it needs to be reference in both
+	key: {
+		TODO,
+		boxes: [
+			key1,
+			key2,
+			...
+		]
+	},
+	key2: ...
 }
 
-readings: {
-	key: {
-		timestamp: '',
-		readings: {}
-	}
-}
+
+
 
 ??????
 rasppi: {
@@ -62,64 +104,8 @@ rasppi: {
 }
 
 
-boxes: [
-	{
-		id: '',
-		devices: [
-			id: 'temp',
-			id: 'co2'
-		],
-		name: 'stanford box 1'
-	},
-	{
-		id: '',
-		devices: [],
-		name: 'boxy'
-	}
-]
-devices: [
-	{
-		id: '',
-		box_id: '',
-		readings: [
-			{
-				id: '',
-				timestamp: '',
-				values: [
-					500,
-					99
-				]
-			},
-			{
-				id: '',
-				timestamp: '',
-				temperature: '',
-				humidity: '',
-			}
-		]
-	},
-	{
-		id: '',
-		readings: [
-			{
-				id: '',
-				timestamp: '',
-				temperature: '',
-				humidity: '',
-			},
-			{
-				id: '',
-				timestamp: '',
-				temperature: '',
-				humidity: '',
-			}
-		]
-	}
-]
 
-
-
-
+// Other notes
 
 boxes: {
 	id0: {},

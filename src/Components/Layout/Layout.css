@@ -1,4 +1,4 @@
-.Box {
+.Layout {
 	outline: 1px solid black;
 	display: flex;
 	flex-direction: row;
@@ -18,7 +18,7 @@
 	margin: 5px;
 }
 
-.Cell {
+.Container {
 	outline: 1px solid black;
 	width: 300px;
 	box-shadow: 2px 2px 2px grey;
@@ -26,12 +26,12 @@
 	margin: 3px 0;
 }
 
-.Cell > ul{
+.Container > ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-.Cell:hover{
+.Container:hover{
 	box-shadow: 2px 2px 2px darkgrey;
 }
